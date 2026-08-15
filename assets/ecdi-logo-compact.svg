@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="compGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00883b"/>
+      <stop offset="100%" stop-color="#006b2e"/>
+    </linearGradient>
+    <linearGradient id="compGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd200"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="compRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e62b32"/>
+      <stop offset="100%" stop-color="#c91820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon Emblem (Compact Circular Badge) -->
+  <g transform="translate(45, 45)">
+    <!-- Base circle -->
+    <circle cx="0" cy="0" r="38" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    
+    <!-- Tri-Color Border Ring Segments -->
+    <path d="M -35 0 A 35 35 0 0 1 0 -35" fill="none" stroke="url(#compGreen)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0 -35 A 35 35 0 0 1 35 0" fill="none" stroke="url(#compGold)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 35 0 A 35 35 0 0 1 0 35" fill="none" stroke="url(#compRed)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0 35 A 35 35 0 0 1 -35 0" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Central Community Graphic -->
+    <!-- Sun of Development -->
+    <circle cx="0" cy="-4" r="8" fill="url(#compGold)"/>
+    <!-- Interlocking Leaves/Hands -->
+    <path d="M -5 12 C -18 10, -22 -6, -10 -15 C -10 -2, -3 6, -5 12 Z" fill="url(#compGreen)"/>
+    <path d="M 5 12 C 18 10, 22 -6, 10 -15 C 10 -2, 3 6, 5 12 Z" fill="url(#compRed)"/>
+    <circle cx="0" cy="5" r="4" fill="#ffd200"/>
+
+    <!-- WhatsApp Support Micro-Pip -->
+    <g transform="translate(18, 18)">
+      <circle cx="0" cy="0" r="10" fill="#25D366" stroke="#ffffff" stroke-width="1.5"/>
+      <path d="M -4 -1 C -4 2, -2 4, 1 5 L 4 5 L 3 2 C 4 0, 3 -3, 0 -4 C -2 -4, -4 -3, -4 -1 Z" fill="#ffffff" transform="scale(0.8) translate(-1, -1)"/>
+    </g>
+  </g>
+
+  <!-- Typography Right Side: Scaled for legal and web header readability -->
+  <!-- Prominent ECDI Title -->
+  <text x="102" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="900" letter-spacing="2.5" fill="#0f172a">
+    ECDI
+  </text>
+  
+  <!-- Ethiopian Flag Accent Bar -->
+  <rect x="205" y="24" width="4" height="20" rx="2" fill="#00883b"/>
+  <rect x="212" y="24" width="4" height="20" rx="2" fill="#ffd200"/>
+  <rect x="219" y="24" width="4" height="20" rx="2" fill="#e62b32"/>
+
+  <!-- Official Subtitle Line 1 -->
+  <text x="102" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" fill="#334155">
+    ETHIOPIAN COMMUNITY DEVELOPMENT INITIATIVE
+  </text>
+  <!-- Official Subtitle Line 2: Legal/NGO Status Tag -->
+  <text x="102" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748b">
+    COMMUNITY EMPOWERMENT • CHARITY &amp; SERVICE
+  </text>
+</svg>

@@ -1,0 +1,141 @@
+{
+  "paymentMethods": [
+    {
+      "id": "pm-cbe-001",
+      "bankName": "Commercial Bank of Ethiopia (CBE)",
+      "accountName": "Ethiopian Community Development Initiative",
+      "accountNumber": "1000327468956",
+      "instructions": "Please enter your Application ID in the payment reference/reason field.",
+      "isActive": true,
+      "displayOrder": 1,
+      "createdAt": "2026-08-10T12:41:26.306Z"
+    },
+    {
+      "id": "pm-aby-002",
+      "bankName": "Bank of Abyssinia",
+      "accountName": "Ethiopian Community Development Initiative",
+      "accountNumber": "264416817",
+      "instructions": "Please enter your Application ID in the payment reference/reason field.",
+      "isActive": true,
+      "displayOrder": 2,
+      "createdAt": "2026-08-10T12:41:26.306Z"
+    }
+  ],
+  "applications": [
+    {
+      "applicationId": "ECDI-2026-DYTM1Y",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "phone": "+251911223344",
+      "dateOfBirth": "1995-05-15",
+      "address": "Addis Ababa",
+      "academicCategory": "Social Science",
+      "specificDegree": "Sociology",
+      "educationLevel": "Bachelor's Degree",
+      "university": "Addis Ababa University",
+      "graduationYear": 2024,
+      "gpa": "3.5",
+      "hasWorkExperience": false,
+      "yearsOfExperience": "N/A",
+      "previousEmployer": "N/A",
+      "jobTitle": "N/A",
+      "volunteerExperience": "None",
+      "cvStoragePath": "cv-1786366304843-570802-test.pdf",
+      "cvOriginalName": "test.pdf",
+      "paymentStatus": "Payment Pending",
+      "applicationStatus": "Payment Pending",
+      "statusHistory": [
+        {
+          "status": "Payment Pending",
+          "changedAt": "2026-08-10T12:51:44.844Z",
+          "note": "Application submitted. Awaiting payment proof."
+        }
+      ],
+      "createdAt": "2026-08-10T12:51:44.844Z",
+      "updatedAt": "2026-08-10T12:51:44.844Z"
+    },
+    {
+      "applicationId": "ECDI-2026-000001",
+      "name": "Samuel Denekew",
+      "fullName": "Samuel Denekew",
+      "email": "samidenekew70@gmail.com",
+      "phone": "+251964202064",
+      "dateOfBirth": "2026-08-06",
+      "address": "Kebele 03, House No. 291",
+      "educationCategory": "Social Science",
+      "academicCategory": "Social Science",
+      "specificDegree": "management",
+      "educationalLevel": "Bachelor's Degree",
+      "educationLevel": "Bachelor's Degree",
+      "university": "Hibre biher college and Debre Markos university",
+      "graduationYear": 2023,
+      "gpa": "3.9",
+      "workExperienceStatus": "NO",
+      "hasWorkExperience": false,
+      "yearsOfExperience": "N/A",
+      "previousEmployer": "N/A",
+      "jobTitle": "N/A",
+      "volunteerExperience": "Not provided",
+      "cvStoragePath": "cv-resumes/ECDI-2026-000001/resume.pdf",
+      "cvOriginalName": "Software.pdf",
+      "paymentProofStoragePath": null,
+      "paymentScreenshotStoragePath": null,
+      "paymentStatus": "Payment Pending",
+      "applicationStatus": "Payment Pending",
+      "statusHistory": [
+        {
+          "status": "Payment Pending",
+          "changedAt": "2026-08-15T10:24:18.647Z",
+          "note": "Application recorded. Awaiting payment proof."
+        }
+      ],
+      "createdAt": "2026-08-15T10:24:18.647Z",
+      "updatedAt": "2026-08-15T10:24:18.647Z"
+    },
+    {
+      "applicationId": "ECDI-2026-000002",
+      "name": "Samuel Denekew",
+      "fullName": "Samuel Denekew",
+      "email": "samuel@example.com",
+      "phone": "0911223344",
+      "dateOfBirth": "1995-05-12",
+      "address": "Addis Ababa, Ethiopia",
+      "educationCategory": "Engineering and Technology",
+      "academicCategory": "Engineering and Technology",
+      "specificDegree": "Software Engineering",
+      "educationalLevel": "BSc / Bachelor's Degree",
+      "educationLevel": "BSc / Bachelor's Degree",
+      "university": "Addis Ababa University",
+      "graduationYear": 2020,
+      "gpa": "3.85",
+      "workExperienceStatus": "YES",
+      "hasWorkExperience": true,
+      "yearsOfExperience": "3",
+      "previousEmployer": "Tech Corp",
+      "jobTitle": "Software Developer",
+      "volunteerExperience": "Community coding instructor",
+      "cvStoragePath": "cv-resumes/ECDI-2026-000002/resume.pdf",
+      "cvOriginalName": "resume.pdf",
+      "paymentProofStoragePath": "payment-proofs/ECDI-2026-000002/payment-proof.png",
+      "paymentScreenshotStoragePath": "payment-proofs/ECDI-2026-000002/payment-proof.png",
+      "paymentStatus": "Payment Proof Submitted",
+      "applicationStatus": "Payment Proof Submitted",
+      "statusHistory": [
+        {
+          "status": "Payment Pending",
+          "changedAt": "2026-08-15T11:20:13.247Z",
+          "note": "Application recorded. Awaiting payment proof."
+        },
+        {
+          "status": "Payment Proof Submitted",
+          "changedAt": "2026-08-15T11:20:17.181Z",
+          "note": "Payment screenshot submitted by applicant."
+        }
+      ],
+      "createdAt": "2026-08-15T11:20:13.247Z",
+      "updatedAt": "2026-08-15T11:20:17.181Z",
+      "paymentScreenshotOriginalName": "screenshot.png",
+      "paymentSubmittedAt": "2026-08-15T11:20:17.181Z"
+    }
+  ]
+}

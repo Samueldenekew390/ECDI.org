@@ -1,0 +1,6 @@
+{
+  "name": "Ethiopian Community Development Initiative",
+  "description": "Official platform for Ethiopian Community Development Initiative (ECDI) connecting graduates with professional opportunities and community initiatives across Ethiopia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

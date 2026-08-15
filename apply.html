@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Portal | Ethiopian Community Development Initiative (ECDI)</title>
+  
+  <meta name="description" content="Submit your official application for ECDI graduate professional opportunities and community development initiatives.">
+  <link rel="canonical" href="https://ais-pre-5qdncpqr7r3j3ixccv6gx5-785328023687.europe-west2.run.app/apply.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/application.css">
+</head>
+<body class="bg-[#F5F5F0] text-[#1A1A1A] font-sans min-h-screen flex flex-col">
+
+  <!-- Header Navigation -->
+  <header class="header-glass sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-header rounded-lg">
+          <div>
+            <span class="text-xl font-extrabold text-slate-900 block leading-none">ECDI</span>
+            <span class="text-[0.65rem] font-bold text-emerald-700 tracking-wider uppercase block mt-1">Application Portal</span>
+          </div>
+        </a>
+        <a href="index.html" class="btn-outline text-xs py-2 px-4">
+          ← Back to Homepage
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Form Container -->
+  <main class="flex-1 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-10">
+        <a href="index.html" class="inline-block mb-4">
+          <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-badge hover:opacity-95 transition-opacity">
+        </a>
+        <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Professional Recruitment</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Application Form</h1>
+        <p class="text-slate-600 mt-2 text-sm">Please fill out all required fields accurately. You will review your information before proceeding to payment.</p>
+      </div>
+
+      <!-- Step Progress Bar -->
+      <div class="step-progress-bar max-w-2xl mx-auto">
+        <div class="step-progress-fill" id="progress-fill" style="width: 0%;"></div>
+        
+        <div class="step-item active">
+          <div class="step-circle">1</div>
+          <span class="step-label hidden sm:block">Info</span>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">2</div>
+          <span class="step-label hidden sm:block">Education</span>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">3</div>
+          <span class="step-label hidden sm:block">Work Exp</span>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">4</div>
+          <span class="step-label hidden sm:block">Volunteer</span>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">5</div>
+          <span class="step-label hidden sm:block">CV PDF</span>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">6</div>
+          <span class="step-label hidden sm:block">Review</span>
+        </div>
+      </div>
+
+      <!-- Multi-step Form Card -->
+      <div class="form-card">
+        <form id="applicationForm" onsubmit="return false;" novalidate>
+          
+          <!-- SECTION 1 — APPLICANT INFORMATION -->
+          <div id="step-1" class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+              <h2 class="text-xl font-bold text-slate-900">1. Applicant Information</h2>
+              <p class="text-xs text-slate-500">Provide your official contact and personal details.</p>
+            </div>
+
+            <div>
+              <label for="fullName" class="form-label">Full Name <span class="text-rose-500">*</span></label>
+              <input type="text" id="fullName" class="form-input" placeholder="e.g. Abebe Bikila Tadesse" required>
+              <span id="fullName-error" class="error-message hidden"></span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="email" class="form-label">Email Address <span class="text-rose-500">*</span></label>
+                <input type="email" id="email" class="form-input" placeholder="applicant@example.com" required>
+                <span id="email-error" class="error-message hidden"></span>
+              </div>
+              <div>
+                <label for="phone" class="form-label">Phone Number <span class="text-rose-500">*</span></label>
+                <input type="tel" id="phone" class="form-input" placeholder="+251 911 000 000" required>
+                <span id="phone-error" class="error-message hidden"></span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="dateOfBirth" class="form-label">Date of Birth <span class="text-rose-500">*</span></label>
+                <input type="date" id="dateOfBirth" class="form-input" required>
+                <span id="dateOfBirth-error" class="error-message hidden"></span>
+              </div>
+              <div>
+                <label for="address" class="form-label">Current Residential Address <span class="text-rose-500">*</span></label>
+                <input type="text" id="address" class="form-input" placeholder="City / Subcity / Region" required>
+                <span id="address-error" class="error-message hidden"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2 — EDUCATION -->
+          <div id="step-2" class="space-y-6 hidden">
+            <div class="border-b border-slate-200 pb-4">
+              <h2 class="text-xl font-bold text-slate-900">2. Academic Background & Education</h2>
+              <p class="text-xs text-slate-500">Provide details regarding your highest degree or diploma qualification.</p>
+            </div>
+
+            <div>
+              <label for="academicCategory" class="form-label">Academic Category <span class="text-rose-500">*</span></label>
+              <select id="academicCategory" class="form-input" required>
+                <option value="">-- Select Academic Stream --</option>
+                <option value="Social Science">Social Science</option>
+                <option value="Natural Science">Natural Science</option>
+                <option value="Other">Other Disciplines</option>
+              </select>
+              <span id="academicCategory-error" class="error-message hidden"></span>
+            </div>
+
+            <div>
+              <label for="specificDegree" class="form-label">Specific Degree / Major <span class="text-rose-500">*</span></label>
+              <input type="text" id="specificDegree" class="form-input" placeholder="e.g., Sociology, Environmental Science, Economics" required>
+              <span id="specificDegree-error" class="error-message hidden"></span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="educationLevel" class="form-label">Educational Level <span class="text-rose-500">*</span></label>
+                <select id="educationLevel" class="form-input" required>
+                  <option value="">-- Select Qualification --</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  <option value="Master's Degree">Master's Degree</option>
+                  <option value="PhD">PhD</option>
+                </select>
+                <span id="educationLevel-error" class="error-message hidden"></span>
+              </div>
+              <div>
+                <label for="university" class="form-label">University / College <span class="text-rose-500">*</span></label>
+                <input type="text" id="university" class="form-input" placeholder="e.g. Addis Ababa University" required>
+                <span id="university-error" class="error-message hidden"></span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="graduationYear" class="form-label">Graduation Year <span class="text-rose-500">*</span></label>
+                <input type="number" id="graduationYear" class="form-input" min="1980" max="2026" placeholder="2024" required>
+                <span id="graduationYear-error" class="error-message hidden"></span>
+              </div>
+              <div>
+                <label for="gpa" class="form-label">GPA / Cumulative Score <span class="text-rose-500">*</span></label>
+                <input type="text" id="gpa" class="form-input" placeholder="e.g. 3.45" required>
+                <span id="gpa-error" class="error-message hidden"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3 — PREVIOUS WORK EXPERIENCE -->
+          <div id="step-3" class="space-y-6 hidden">
+            <div class="border-b border-slate-200 pb-4">
+              <h2 class="text-xl font-bold text-slate-900">3. Do you have previous work experience?</h2>
+              <p class="text-xs text-slate-500">If none, select "No" and the system will record N/A automatically.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4" id="workExpGroup">
+              <label class="radio-card">
+                <input type="radio" name="workExpChoice" id="work-exp-yes" value="YES" class="accent-emerald-700">
+                <span class="font-semibold text-slate-900 text-sm">Yes, I have work experience</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="workExpChoice" id="work-exp-no" value="NO" class="accent-emerald-700" checked>
+                <span class="font-semibold text-slate-900 text-sm">No, I have no work experience (N/A)</span>
+              </label>
+            </div>
+            <span id="workExpGroup-error" class="error-message hidden"></span>
+
+            <!-- Dynamic Fields for YES -->
+            <div id="work-exp-details" class="space-y-6 hidden pt-4 border-t border-slate-100">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="yearsOfExperience" class="form-label">Years of Experience <span class="text-rose-500">*</span></label>
+                  <input type="text" id="yearsOfExperience" class="form-input" placeholder="e.g. 2 Years">
+                  <span id="yearsOfExperience-error" class="error-message hidden"></span>
+                </div>
+                <div>
+                  <label for="previousEmployer" class="form-label">Previous Employer / Organization <span class="text-rose-500">*</span></label>
+                  <input type="text" id="previousEmployer" class="form-input" placeholder="Organization name">
+                  <span id="previousEmployer-error" class="error-message hidden"></span>
+                </div>
+              </div>
+
+              <div>
+                <label for="jobTitle" class="form-label">Job Title <span class="text-rose-500">*</span></label>
+                <input type="text" id="jobTitle" class="form-input" placeholder="Your previous role">
+                <span id="jobTitle-error" class="error-message hidden"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4 — VOLUNTEER EXPERIENCE -->
+          <div id="step-4" class="space-y-6 hidden">
+            <div class="border-b border-slate-200 pb-4">
+              <h2 class="text-xl font-bold text-slate-900">4. Volunteer Experience <span class="text-xs font-normal text-slate-500">(Optional)</span></h2>
+              <p class="text-xs text-slate-500">Describe any community development or volunteer initiatives you participated in.</p>
+            </div>
+
+            <div>
+              <label for="volunteerExperience" class="form-label">Volunteer Role & Description</label>
+              <textarea id="volunteerExperience" rows="5" class="form-input" placeholder="Organization, Role, Activities, Duration, and Description..."></textarea>
+            </div>
+          </div>
+
+          <!-- SECTION 5 — CV / RESUME PDF -->
+          <div id="step-5" class="space-y-6 hidden">
+            <div class="border-b border-slate-200 pb-4">
+              <h2 class="text-xl font-bold text-slate-900">5. CV / Resume Upload (PDF)</h2>
+              <p class="text-xs text-slate-500">Upload your latest Curriculum Vitae in PDF format (Max 10MB).</p>
+            </div>
+
+            <div id="cvGroup">
+              <div class="dropzone" id="cv-dropzone">
+                <div class="text-4xl mb-3">📄</div>
+                <h3 class="font-bold text-slate-900 text-base">Click to select or drag & drop your CV PDF</h3>
+                <p class="text-xs text-slate-500 mt-1">Only PDF format accepted. Maximum file size: 10MB.</p>
+                <input type="file" id="cvFileInput" accept="application/pdf,.pdf" class="hidden">
+              </div>
+
+              <div id="file-preview" class="file-preview hidden">
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">📄</span>
+                  <span id="file-name-display" class="text-sm font-semibold text-slate-800"></span>
+                </div>
+                <button type="button" id="remove-file-btn" class="text-xs font-bold text-rose-600 hover:text-rose-800">
+                  Remove File
+                </button>
+              </div>
+
+              <span id="cvGroup-error" class="error-message hidden"></span>
+            </div>
+          </div>
+
+          <!-- SECTION 6 — FINAL REVIEW / CONFIRMATION -->
+          <div id="step-6" class="space-y-6 hidden">
+            <div class="border-b border-slate-200 pb-4 text-center sm:text-left">
+              <a href="index.html" class="inline-block mb-3">
+                <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-compact">
+              </a>
+              <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Final Step</span>
+              <h2 class="text-2xl font-extrabold text-slate-900">Review Your Application</h2>
+              <p class="text-xs text-slate-500 mt-1">Please review your information carefully before proceeding to payment.</p>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Applicant Details -->
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <h3 class="font-bold text-xs uppercase tracking-wider text-emerald-800 mb-2 border-b border-slate-200 pb-1">1. Applicant Details</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div><span class="text-slate-500">Full Name:</span> <span id="review-name" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Email:</span> <span id="review-email" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Phone:</span> <span id="review-phone" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Date of Birth:</span> <span id="review-dob" class="font-bold text-slate-900"></span></div>
+                  <div class="sm:col-span-2"><span class="text-slate-500">Address:</span> <span id="review-address" class="font-bold text-slate-900"></span></div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <h3 class="font-bold text-xs uppercase tracking-wider text-emerald-800 mb-2 border-b border-slate-200 pb-1">2. Education</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div><span class="text-slate-500">Academic Category:</span> <span id="review-category" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Degree / Major:</span> <span id="review-degree" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Educational Level:</span> <span id="review-level" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">University:</span> <span id="review-university" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Graduation Year:</span> <span id="review-grad-year" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">GPA:</span> <span id="review-gpa" class="font-bold text-slate-900"></span></div>
+                </div>
+              </div>
+
+              <!-- Work & Volunteer Experience & CV -->
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <h3 class="font-bold text-xs uppercase tracking-wider text-emerald-800 mb-2 border-b border-slate-200 pb-1">3. Experience & CV Document</h3>
+                <div class="text-xs space-y-2">
+                  <div><span class="text-slate-500">Work Experience:</span> <span id="review-work-exp" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Volunteer Experience:</span> <span id="review-volunteer" class="font-bold text-slate-900"></span></div>
+                  <div><span class="text-slate-500">Uploaded CV File:</span> <span id="review-cv" class="font-bold text-emerald-700"></span></div>
+                </div>
+              </div>
+
+              <!-- Non-refundable Payment Notice -->
+              <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-3">
+                <span class="text-lg">⚠️</span>
+                <div>
+                  <p class="font-bold">Please review your information carefully before proceeding to payment.</p>
+                  <p class="mt-1 text-[0.75rem] text-amber-800">The application fee ($4 / 600 Birr) is non-refundable once paid. Upon confirmation, your record will be saved and you will be redirected to the payment page.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review Stage Actions Bar -->
+            <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <button type="button" id="edit-app-btn" class="btn-outline w-full sm:w-auto text-xs py-3 px-6 cursor-pointer">
+                ✏️ Edit Application
+              </button>
+              <div id="confirm-button-container" class="w-full sm:w-auto flex justify-end">
+                <button 
+                  type="button" 
+                  id="confirm-submit-btn" 
+                  class="btn-primary text-xs py-3.5 px-6 bg-emerald-700 hover:bg-emerald-800 text-white w-full sm:w-auto font-bold tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95 transition-all"
+                >
+                  <span>Confirm & Proceed to Payment</span>
+                  <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons Bar -->
+          <div id="nav-buttons-bar" class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-between">
+            <button type="button" id="prev-btn" class="btn-outline hidden">
+              ← Previous Step
+            </button>
+            <div class="ml-auto flex items-center gap-3">
+              <button type="button" id="next-btn" class="btn-primary">
+                <span>Next Step</span>
+                <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto text-xs text-center space-y-3">
+    <div class="flex flex-col items-center justify-center gap-2">
+      <a href="index.html" class="inline-block" title="Ethiopian Community Development Initiative (ECDI)">
+        <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-footer rounded bg-white p-1">
+      </a>
+      <span class="font-bold text-slate-200 text-sm">Ethiopian Community Development Initiative (ECDI)</span>
+    </div>
+    <p>&copy; 2026 Ethiopian Community Development Initiative (ECDI). All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a 
+    href="https://wa.me/251927141774" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="whatsapp-float"
+    aria-label="Contact ECDI on WhatsApp"
+  >
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.96 9.96 0 004.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/application.js"></script>
+</body>
+</html>

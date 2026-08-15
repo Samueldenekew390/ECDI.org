@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Standardized ECDI Legal & NGO Logo Responsive System */
+.ecdi-logo,
+.ecdi-logo-header {
+  width: auto;
+  height: 56px;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.ecdi-logo-footer {
+  width: auto;
+  height: 44px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+}
+
+.ecdi-logo-auth {
+  width: auto;
+  height: 64px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ecdi-logo-compact {
+  width: auto;
+  height: 38px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 52px;
+    max-width: 195px;
+  }
+  .ecdi-logo-footer {
+    height: 40px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 48px;
+    max-width: 180px;
+  }
+  .ecdi-logo-footer {
+    height: 38px;
+    max-width: 140px;
+  }
+  .ecdi-logo-auth {
+    height: 56px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 42px;
+    max-width: 155px;
+  }
+  .ecdi-logo-footer {
+    height: 34px;
+    max-width: 130px;
+  }
+  .ecdi-logo-auth {
+    height: 48px;
+    max-width: 150px;
+  }
+}
+

@@ -1,0 +1,333 @@
+/* ECDI Application Form CSS - Editorial Aesthetic */
+
+.step-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.step-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #1A1A1A;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.step-progress-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background-color: #1A1A1A;
+  z-index: 2;
+  transform: translateY(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.step-item {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 0px;
+  background-color: #F5F5F0;
+  border: 1px solid #1A1A1A;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.step-item.active .step-circle {
+  border-color: #1A1A1A;
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.step-item.completed .step-circle {
+  border-color: #1A1A1A;
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.step-label {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #555550;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.step-item.active .step-label {
+  color: #1A1A1A;
+  font-weight: 800;
+}
+
+/* Form Controls */
+.form-card {
+  background: #FFFFFF;
+  border: 1px solid #1A1A1A;
+  border-radius: 0px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+  scroll-margin-top: 100px;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1A1A1A;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #1A1A1A;
+  border-radius: 0px;
+  font-size: 16px; /* 16px prevents iOS Safari auto-zoom on focus */
+  min-height: 48px;
+  color: #1A1A1A;
+  background-color: #F5F5F0;
+  touch-action: manipulation;
+  scroll-margin-top: 100px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  background-color: #FFFFFF;
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #1A1A1A;
+}
+
+.form-input.error {
+  border-color: #991b1b;
+  box-shadow: 0 0 0 1px #991b1b;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  color: #991b1b;
+  font-size: 0.775rem;
+  font-weight: 600;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Form Buttons Touch Targets */
+#next-btn, #prev-btn, #edit-app-btn, #confirm-submit-btn, #submit-proof-btn {
+  min-height: 48px;
+  min-width: 120px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Radio Option Cards */
+.radio-card {
+  border: 1px solid #1A1A1A;
+  border-radius: 0px;
+  padding: 14px 18px;
+  min-height: 52px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #F5F5F0;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  scroll-margin-top: 100px;
+  transition: all 0.15s ease;
+}
+
+.radio-card.error {
+  border-color: #991b1b;
+  background-color: #fef2f2;
+}
+
+.radio-card:hover {
+  background-color: #EBEBE3;
+}
+
+.radio-card.selected {
+  border-color: #1A1A1A;
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.radio-card.selected label, .radio-card.selected p, .radio-card.selected span {
+  color: #F5F5F0 !important;
+}
+
+/* File Drop Zone */
+.dropzone {
+  border: 1px dashed #1A1A1A;
+  border-radius: 0px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: #F5F5F0;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  scroll-margin-top: 100px;
+  transition: all 0.15s ease;
+}
+
+.dropzone:hover, .dropzone.dragover {
+  border-style: solid;
+  background-color: #EBEBE3;
+}
+
+.file-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #EBEBE3;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  margin-top: 12px;
+}
+
+/* Mobile Responsive Navigation Bar (320px - 640px) */
+@media (max-width: 640px) {
+  .form-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .step-progress-bar {
+    margin-bottom: 1.5rem;
+  }
+
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  #nav-buttons-bar {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+    width: 100%;
+  }
+
+  #nav-buttons-bar .ml-auto {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  #next-btn, #prev-btn, #edit-app-btn, #confirm-submit-btn, #submit-proof-btn {
+    width: 100% !important;
+    min-height: 52px !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* Standardized ECDI Legal & NGO Logo Responsive System */
+.ecdi-logo,
+.ecdi-logo-header {
+  width: auto;
+  height: 56px;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.ecdi-logo-footer {
+  width: auto;
+  height: 44px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+}
+
+.ecdi-logo-badge {
+  width: auto;
+  height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 52px;
+    max-width: 195px;
+  }
+  .ecdi-logo-footer {
+    height: 40px;
+    max-width: 150px;
+  }
+  .ecdi-logo-badge {
+    height: 54px;
+    max-width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 48px;
+    max-width: 180px;
+  }
+  .ecdi-logo-footer {
+    height: 38px;
+    max-width: 140px;
+  }
+  .ecdi-logo-badge {
+    height: 48px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 42px;
+    max-width: 155px;
+  }
+  .ecdi-logo-footer {
+    height: 34px;
+    max-width: 130px;
+  }
+  .ecdi-logo-badge {
+    height: 42px;
+    max-width: 145px;
+  }
+}
+
+

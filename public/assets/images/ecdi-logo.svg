@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <!-- Crisp white background for institutional and letterhead use -->
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- EMBLEM GROUP (Top) -->
+  <g transform="translate(300, 160)">
+    <!-- Outer Green Arc / Branch with Leaves -->
+    <!-- Circular branch arc from left around the top to right -->
+    <path d="M -85 10 A 108 108 0 1 1 85 45" fill="none" stroke="#488e2c" stroke-width="11" stroke-linecap="round"/>
+    
+    <!-- Top-Left Leaf Sprout -->
+    <!-- Leaf 1 (upper left pointing up) -->
+    <path d="M -98 -15 C -135 -30, -145 -75, -115 -105 C -90 -75, -80 -35, -98 -15 Z" fill="#488e2c"/>
+    <path d="M -98 -15 C -105 -50, -115 -105, -115 -105" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    
+    <!-- Leaf 2 (lateral leaf pointing left) -->
+    <path d="M -102 5 C -145 10, -165 -25, -145 -50 C -125 -30, -95 -10, -102 5 Z" fill="#488e2c"/>
+    <path d="M -102 5 C -125 -15, -145 -50, -145 -50" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Bottom Stylized Cradling Hand (Deep Blue) -->
+    <!-- Flowing hand holding the community up -->
+    <path d="M -95 15 C -85 65, -40 100, 20 100 C 65 100, 100 70, 108 30 C 95 65, 50 82, 5 78 C -35 74, -75 48, -95 15 Z" fill="#17446e"/>
+    <!-- Hand base thumb curve -->
+    <path d="M -95 15 C -65 5, 0 35, 45 42 C 10 32, -40 12, -75 -5 C -88 -2, -95 8, -95 15 Z" fill="#17446e"/>
+
+    <!-- THREE COMMUNITY FIGURES WITH RAISED ARMS -->
+    
+    <!-- LEFT FIGURE (Deep Blue) -->
+    <g transform="translate(-48, 12)">
+      <!-- Head -->
+      <circle cx="0" cy="-36" r="13.5" fill="#17446e"/>
+      <!-- Body & Raised Arms (joyful V-shape) -->
+      <path d="M 0 -18 C -5 -18, -12 -12, -22 -28 C -25 -32, -28 -30, -26 -26 C -20 -10, -10 18, 0 24 C 10 18, 16 -10, 22 -26 C 24 -30, 21 -32, 18 -28 C 8 -12, 5 -18, 0 -18 Z" fill="#17446e"/>
+    </g>
+
+    <!-- CENTER FIGURE (Taller Leader / Green) -->
+    <g transform="translate(6, -10)">
+      <!-- Head -->
+      <circle cx="0" cy="-44" r="16.5" fill="#488e2c"/>
+      <!-- Body & Raised Arms (Wide V-shape) -->
+      <path d="M 0 -22 C -6 -22, -16 -14, -34 -38 C -38 -43, -42 -40, -39 -35 C -30 -12, -15 32, 0 40 C 15 32, 30 -12, 39 -35 C 42 -40, 38 -43, 34 -38 C 16 -14, 6 -22, 0 -22 Z" fill="#488e2c"/>
+    </g>
+
+    <!-- RIGHT FIGURE (Warm Amber / Orange) -->
+    <g transform="translate(56, 16)">
+      <!-- Head -->
+      <circle cx="0" cy="-34" r="12.5" fill="#e07a1e"/>
+      <!-- Body & Raised Arms -->
+      <path d="M 0 -16 C -4 -16, -10 -10, -18 -24 C -21 -28, -24 -26, -22 -22 C -16 -8, -8 16, 0 22 C 8 16, 14 -8, 20 -22 C 22 -26, 19 -28, 16 -24 C 8 -10, 4 -16, 0 -16 Z" fill="#e07a1e"/>
+    </g>
+  </g>
+
+  <!-- TYPOGRAPHY SECTION (Bottom) -->
+  <g transform="translate(300, 360)">
+    <!-- Main Acronym: E C D I -->
+    <!-- E in Navy Blue -->
+    <text x="-142" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="115" font-weight="900" fill="#17446e" text-anchor="middle">E</text>
+    <!-- C in Navy Blue -->
+    <text x="-52" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="115" font-weight="900" fill="#17446e" text-anchor="middle">C</text>
+    <!-- D in Rich Green -->
+    <text x="46" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="115" font-weight="900" fill="#488e2c" text-anchor="middle">D</text>
+    <!-- I in Navy Blue -->
+    <text x="132" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="115" font-weight="900" fill="#17446e" text-anchor="middle">I</text>
+
+    <!-- Divider Bar with '— ETHIOPIAN —' -->
+    <line x1="-205" y1="88" x2="-86" y2="88" stroke="#488e2c" stroke-width="2.5"/>
+    <text x="0" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#488e2c" text-anchor="middle">ETHIOPIAN</text>
+    <line x1="86" y1="88" x2="205" y2="88" stroke="#488e2c" stroke-width="2.5"/>
+
+    <!-- COMMUNITY DEVELOPMENT INITIATIVE -->
+    <text x="0" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20.5" font-weight="800" letter-spacing="1.2" fill="#17446e" text-anchor="middle">
+      COMMUNITY DEVELOPMENT INITIATIVE
+    </text>
+
+    <!-- Motto Tagline -->
+    <text x="0" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" letter-spacing="0.4" fill="#3f7e28" text-anchor="middle">
+      Empowering People. Strengthening Communities. Building a Better Ethiopia.
+    </text>
+  </g>
+</svg>

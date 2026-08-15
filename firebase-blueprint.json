@@ -1,0 +1,153 @@
+{
+  "entities": {
+    "Application": {
+      "title": "Application",
+      "description": "Applicant submission record containing applicant information, education, work experience, volunteer experience, CV storage path, payment status, and review status.",
+      "type": "object",
+      "properties": {
+        "applicationId": {
+          "type": "string",
+          "pattern": "^ECDI-2026-[A-Z0-9]{6}$",
+          "description": "Unique ECDI Application Identifier"
+        },
+        "fullName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100,
+          "description": "Full official name of applicant"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 120,
+          "description": "Contact email address"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 9,
+          "maxLength": 30,
+          "description": "Contact phone number"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "maxLength": 20,
+          "description": "Date of birth"
+        },
+        "address": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Residential address"
+        },
+        "academicCategory": {
+          "type": "string",
+          "enum": ["Social Science", "Natural Science", "Other"],
+          "description": "Broad academic discipline stream"
+        },
+        "specificDegree": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Specific major degree title"
+        },
+        "educationLevel": {
+          "type": "string",
+          "enum": ["Diploma", "Bachelor's Degree", "Master's Degree", "PhD"],
+          "description": "Highest level of completed education"
+        },
+        "university": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Graduating university or college"
+        },
+        "graduationYear": {
+          "type": "integer",
+          "description": "Year of graduation"
+        },
+        "gpa": {
+          "type": "string",
+          "maxLength": 20,
+          "description": "GPA score"
+        },
+        "hasWorkExperience": {
+          "type": "boolean",
+          "description": "Whether candidate has previous work experience"
+        },
+        "yearsOfExperience": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "Years of experience or N/A"
+        },
+        "previousEmployer": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Previous organization or N/A"
+        },
+        "jobTitle": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Previous job title or N/A"
+        },
+        "volunteerExperience": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Volunteer experience description"
+        },
+        "cvStoragePath": {
+          "type": "string",
+          "maxLength": 255,
+          "description": "Path to uploaded CV PDF file in storage"
+        },
+        "paymentScreenshotStoragePath": {
+          "type": "string",
+          "maxLength": 255,
+          "description": "Path to uploaded payment screenshot in storage"
+        },
+        "paymentStatus": {
+          "type": "string",
+          "enum": ["Payment Pending", "Payment Proof Submitted", "Verified", "Failed"],
+          "description": "Payment verification status"
+        },
+        "applicationStatus": {
+          "type": "string",
+          "enum": ["Payment Pending", "Payment Proof Submitted", "Under Review", "Shortlisted", "Approved", "Rejected"],
+          "description": "Administrative application review status"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last modification timestamp"
+        }
+      },
+      "required": ["applicationId", "fullName", "email", "phone", "academicCategory", "specificDegree", "educationLevel", "university", "cvStoragePath", "paymentStatus", "applicationStatus"]
+    },
+    "PaymentMethod": {
+      "title": "PaymentMethod",
+      "description": "Official bank account or payment provider configuration managed by ECDI administrators.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bankName": { "type": "string", "maxLength": 100 },
+        "accountName": { "type": "string", "maxLength": 100 },
+        "accountNumber": { "type": "string", "maxLength": 50 },
+        "instructions": { "type": "string", "maxLength": 500 },
+        "isActive": { "type": "boolean" },
+        "displayOrder": { "type": "integer" }
+      },
+      "required": ["id", "bankName", "accountNumber", "isActive"]
+    }
+  },
+  "firestore": {
+    "/applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/Application" },
+      "description": "Collection storing applicant submissions"
+    },
+    "/paymentMethods/{paymentMethodId}": {
+      "schema": { "$ref": "#/entities/PaymentMethod" },
+      "description": "Collection storing configurable payment methods"
+    }
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Ethiopian Community Development Initiative (ECDI)</title>
+  
+  <meta name="description" content="Official Administration Management System for ECDI Applications, Payment Proofs, and System Settings.">
+  <link rel="canonical" href="https://ais-pre-5qdncpqr7r3j3ixccv6gx5-785328023687.europe-west2.run.app/admin.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/application.css">
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans min-h-screen">
+
+  <div class="admin-layout">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar hidden md:flex">
+      <div class="p-6 border-b border-slate-800 flex items-center gap-3">
+        <a href="index.html" class="inline-block shrink-0">
+          <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-compact rounded bg-white p-0.5">
+        </a>
+        <div>
+          <span class="font-bold text-white text-base block leading-none">ECDI Admin</span>
+          <span class="text-[0.65rem] text-slate-400 block mt-1">Management Portal</span>
+        </div>
+      </div>
+
+      <nav class="flex-1 py-6 space-y-1">
+        <a href="#overview-section" class="admin-nav-item active">
+          <span>📊 Overview</span>
+        </a>
+        <a href="#applications-section" class="admin-nav-item">
+          <span>📑 Applications</span>
+        </a>
+        <a href="#payment-methods-section" class="admin-nav-item">
+          <span>💳 Payment Methods</span>
+        </a>
+        <a href="index.html" target="_blank" class="admin-nav-item">
+          <span>🌐 View Public Site</span>
+        </a>
+      </nav>
+
+      <div class="p-4 border-t border-slate-800">
+        <button id="logout-btn" class="w-full text-left px-4 py-2.5 rounded-lg text-rose-300 hover:bg-rose-500/10 text-xs font-bold transition-all flex items-center justify-between">
+          <span>Sign Out</span>
+          <span>🚪</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="md:hidden shrink-0">
+            <img src="/assets/ecdi-logo.png" alt="Ethiopian Community Development Initiative (ECDI) Logo" class="ecdi-logo-compact rounded bg-white p-0.5">
+          </a>
+          <h1 class="font-extrabold text-slate-900 text-lg">Administrator Dashboard</h1>
+        </div>
+        <div class="flex items-center gap-4">
+          <button id="export-csv-btn" class="btn-primary text-xs py-2 px-4 bg-slate-900 hover:bg-slate-800">
+            📥 Export CSV Data
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Body Content -->
+      <div class="p-6 space-y-8 max-w-7xl mx-auto w-full">
+        
+        <!-- Metrics Stats Cards Grid -->
+        <section id="overview-section">
+          <h2 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Application Statistics Overview</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            
+            <div class="stat-card">
+              <span class="text-xs text-slate-500 block font-medium">Total Applications</span>
+              <span id="stat-total" class="text-2xl font-extrabold text-slate-900 mt-1 block">0</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="text-xs text-amber-700 block font-medium">Payment Pending</span>
+              <span id="stat-pending" class="text-2xl font-extrabold text-amber-700 mt-1 block">0</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="text-xs text-blue-700 block font-medium">Proof Submitted</span>
+              <span id="stat-proof" class="text-2xl font-extrabold text-blue-700 mt-1 block">0</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="text-xs text-purple-700 block font-medium">Under Review</span>
+              <span id="stat-review" class="text-2xl font-extrabold text-purple-700 mt-1 block">0</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="text-xs text-emerald-700 block font-medium">Approved</span>
+              <span id="stat-approved" class="text-2xl font-extrabold text-emerald-700 mt-1 block">0</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="text-xs text-rose-700 block font-medium">Rejected</span>
+              <span id="stat-rejected" class="text-2xl font-extrabold text-rose-700 mt-1 block">0</span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Applications Table & Search/Filter Toolbar -->
+        <section id="applications-section" class="space-y-4">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">Submitted Applications</h2>
+              <p class="text-xs text-slate-500">Manage candidate profiles, review CVs, verify payment screenshots, and update review statuses.</p>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+            <!-- Search -->
+            <div class="md:col-span-2">
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search name, email, phone, ID, degree..." 
+                class="form-input text-xs py-2"
+              >
+            </div>
+
+            <!-- Category Filter -->
+            <div>
+              <select id="filter-category" class="form-input text-xs py-2">
+                <option value="ALL">All Categories</option>
+                <option value="Social Science">Social Science</option>
+                <option value="Natural Science">Natural Science</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Level Filter -->
+            <div>
+              <select id="filter-level" class="form-input text-xs py-2">
+                <option value="ALL">All Levels</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="PhD">PhD</option>
+              </select>
+            </div>
+
+            <!-- Status Filter -->
+            <div>
+              <select id="filter-status" class="form-input text-xs py-2">
+                <option value="ALL">All Statuses</option>
+                <option value="Payment Pending">Payment Pending</option>
+                <option value="Payment Proof Submitted">Proof Submitted</option>
+                <option value="Under Review">Under Review</option>
+                <option value="Shortlisted">Shortlisted</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Applications Table -->
+          <div class="table-container overflow-x-auto">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>App ID</th>
+                  <th>Applicant Name</th>
+                  <th>Academic Major</th>
+                  <th>Work Exp</th>
+                  <th>Payment</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="apps-table-body">
+                <!-- Dynamically populated from /api/admin/applications -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Payment Methods Admin Panel CRUD -->
+        <section id="payment-methods-section" class="space-y-4 pt-6 border-t border-slate-200">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">Payment Methods Management</h2>
+              <p class="text-xs text-slate-500">Configure public bank account numbers and payment instructions displayed to applicants.</p>
+            </div>
+            <button id="add-pm-btn" class="btn-primary text-xs py-2 px-4 bg-emerald-700 hover:bg-emerald-800">
+              ➕ Add Payment Method
+            </button>
+          </div>
+
+          <div id="payment-methods-admin-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Dynamically populated from /api/admin/payment-methods -->
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Detail Profile Drawer Modal -->
+  <div id="detail-modal" class="modal-overlay">
+    <div class="modal-content p-6 sm:p-8 space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h3 class="font-bold text-slate-900 text-lg">Application Profile Details</h3>
+        <button onclick="document.getElementById('detail-modal').classList.remove('open')" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      </div>
+
+      <div id="detail-modal-body">
+        <!-- Dynamically populated by js/admin.js viewApplicationDetails() -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/auth.js"></script>
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

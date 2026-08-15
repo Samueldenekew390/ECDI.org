@@ -1,0 +1,185 @@
+/* ECDI Admin Dashboard CSS - Editorial Aesthetic */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F5F5F0;
+  color: #1A1A1A;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+  z-index: 50;
+  border-right: 1px solid #1A1A1A;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #D6D6CC;
+  font-weight: 600;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.admin-nav-item:hover {
+  background-color: rgba(245, 245, 240, 0.08);
+  color: #FFFFFF;
+}
+
+.admin-nav-item.active {
+  background-color: rgba(245, 245, 240, 0.15);
+  color: #FFFFFF;
+  border-left-color: #F5F5F0;
+  font-weight: 700;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-topbar {
+  height: 64px;
+  background-color: #F5F5F0;
+  border-bottom: 1px solid #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  border-radius: 0px;
+  padding: 20px;
+  border: 1px solid #1A1A1A;
+  box-shadow: 0 2px 6px rgba(26, 26, 26, 0.04);
+}
+
+/* Custom Table */
+.table-container {
+  background: #FFFFFF;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(26, 26, 26, 0.04);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.admin-table th {
+  background-color: #EBEBE3;
+  color: #1A1A1A;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 18px;
+  border-bottom: 1px solid #1A1A1A;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #EBEBE3;
+  color: #1A1A1A;
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #F5F5F0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 16px 32px rgba(26, 26, 26, 0.2);
+}
+
+/* Standardized ECDI Legal & NGO Logo Responsive System */
+.ecdi-logo,
+.ecdi-logo-header {
+  width: auto;
+  height: 52px;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.ecdi-logo-compact {
+  width: auto;
+  height: 36px;
+  max-width: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.ecdi-logo-auth {
+  width: auto;
+  height: 64px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 44px;
+    max-width: 170px;
+  }
+  .ecdi-logo-compact {
+    height: 32px;
+    max-width: 130px;
+  }
+  .ecdi-logo-auth {
+    height: 54px;
+    max-width: 160px;
+  }
+}
+

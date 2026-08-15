@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/apply", "destination": "/apply.html" },
+    { "source": "/payment", "destination": "/payment.html" },
+    { "source": "/success", "destination": "/success.html" },
+    { "source": "/admin-login", "destination": "/admin-login.html" },
+    { "source": "/admin", "destination": "/admin.html" }
+  ]
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Legal Compliance Monochrome (Black & White) Logo -->
+  <circle cx="250" cy="250" r="236" fill="none" stroke="#000000" stroke-width="4"/>
+  <circle cx="250" cy="250" r="224" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+
+  <!-- Geometric Concentric Frame -->
+  <circle cx="250" cy="250" r="160" fill="none" stroke="#000000" stroke-width="6"/>
+  <circle cx="250" cy="250" r="146" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Central Motif in High-Contrast Black -->
+  <g transform="translate(250, 160)">
+    <circle cx="0" cy="0" r="24" fill="#000000"/>
+    <!-- Traditional Ethiopian Cross / Star Geometric Rays -->
+    <path d="M 0 -36 L 5 -24 L 12 -32 L 10 -20 L 24 -22 L 16 -12 L 30 -6 L 18 0 L 28 10 L 15 12 L 22 24 L 10 20 L 8 32 L 0 22 L -8 32 L -10 20 L -22 24 L -15 12 L -28 10 L -18 0 L -30 -6 L -16 -12 L -24 -22 L -10 -20 L -12 -32 L -5 -24 Z" fill="#000000"/>
+    <!-- Leaves / Community Hands -->
+    <path d="M -8 18 C -35 15, -45 -15, -20 -30 C -20 -5, -5 8, -8 18 Z" fill="#000000"/>
+    <path d="M 8 18 C 35 15, 45 -15, 20 -30 C 20 -5, 5 8, 8 18 Z" fill="#000000"/>
+    <circle cx="0" cy="4" r="8" fill="#ffffff"/>
+  </g>
+
+  <!-- Typography: ECDI Acronym -->
+  <text x="250" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="4" fill="#000000" text-anchor="middle">
+    ECDI
+  </text>
+
+  <!-- Subtext Lines -->
+  <text x="250" y="312" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.5" fill="#000000" text-anchor="middle">
+    ETHIOPIAN COMMUNITY
+  </text>
+  <text x="250" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="2" fill="#000000" text-anchor="middle">
+    DEVELOPMENT INITIATIVE
+  </text>
+
+  <text x="250" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="3" fill="#000000" text-anchor="middle">
+    EMPOWERMENT • INTEGRITY • SERVICE
+  </text>
+</svg>

@@ -1,0 +1,413 @@
+/* ECDI Global CSS - Editorial Aesthetic Theme */
+
+@import "tailwindcss";
+
+:root {
+  --color-primary: #1A1A1A;       /* Deep Editorial Ink Charcoal/Black */
+  --color-primary-light: #333333;
+  --color-secondary: #1A1A1A;     /* Solid Editorial Black */
+  --color-secondary-light: #2D2D2D;
+  --color-accent: #1A1A1A;        /* Crisp Minimal Accent */
+  --color-bg: #F5F5F0;            /* Warm Stone Editorial Canvas */
+  --color-surface: #FFFFFF;       /* Crisp Surface Card */
+  --color-surface-muted: #EBEBE3;  /* Secondary Editorial Paper */
+  --color-text-main: #1A1A1A;     /* Primary Ink */
+  --color-text-muted: #555550;   /* Muted Editorial Text */
+  --color-border: #1A1A1A;        /* Crisp Hairline Border */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Editorial Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Typography & Focus States */
+a, button, input, select, textarea {
+  transition: all 0.15s ease-in-out;
+}
+
+*:focus-visible {
+  outline: 2px solid #1A1A1A;
+  outline-offset: 2px;
+}
+
+/* Toast Notifications - Editorial Style */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  pointer-events: none;
+}
+
+.toast {
+  padding: 14px 18px;
+  border-radius: 0px;
+  background: #F5F5F0;
+  color: #1A1A1A;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid #1A1A1A;
+  border-left: 4px solid #1A1A1A;
+  animation: slideIn 0.25s ease-out forwards;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.toast.toast-success {
+  border-left-color: #1A1A1A;
+}
+
+.toast.toast-error {
+  border-left-color: #991b1b;
+}
+
+.toast.toast-info {
+  border-left-color: #1e3a8a;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header & Navigation - Editorial Minimalist */
+.header-glass {
+  background-color: rgba(245, 245, 240, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1A1A1A;
+}
+
+.nav-link {
+  color: #1A1A1A;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 8px 14px;
+  border-radius: 0px;
+  border-bottom: 2px solid transparent;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: #000000;
+  border-bottom-color: #1A1A1A;
+}
+
+/* Buttons - Sharp Editorial Canvas Buttons */
+.btn-primary {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 12px 24px;
+  min-height: 48px;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: #EBEBE3;
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 12px 24px;
+  min-height: 48px;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #1A1A1A;
+  border: 1px solid #1A1A1A;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 11px 22px;
+  min-height: 48px;
+  border-radius: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+/* Badges - Editorial Minimalist Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 0px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid #1A1A1A;
+}
+
+.badge-pending {
+  background-color: #EBEBE3;
+  color: #1A1A1A;
+}
+
+.badge-proof {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.badge-review {
+  background-color: #EBEBE3;
+  color: #1A1A1A;
+}
+
+.badge-shortlisted {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.badge-approved {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.badge-rejected {
+  background-color: #991b1b;
+  color: #FFFFFF;
+  border-color: #991b1b;
+}
+
+/* Floating WhatsApp Button - Editorial Monochrome/Accent */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9990;
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+  padding: 12px 18px;
+  min-height: 48px;
+  border-radius: 0px;
+  border: 1px solid #1A1A1A;
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: all 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: 16px;
+    left: 16px;
+    padding: 10px 14px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   Standardized ECDI Legal & NGO Logo Responsive System
+   ========================================================================== */
+.ecdi-logo,
+.ecdi-logo-header {
+  width: auto;
+  height: 56px;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ecdi-logo-footer {
+  width: auto;
+  height: 44px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.ecdi-logo-auth {
+  width: auto;
+  height: 64px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ecdi-logo-compact {
+  width: auto;
+  height: 38px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 52px;
+    max-width: 195px;
+  }
+  .ecdi-logo-footer {
+    height: 40px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 48px;
+    max-width: 180px;
+  }
+  .ecdi-logo-footer {
+    height: 38px;
+    max-width: 140px;
+  }
+  .ecdi-logo-auth {
+    height: 56px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecdi-logo,
+  .ecdi-logo-header {
+    height: 42px;
+    max-width: 155px;
+  }
+  .ecdi-logo-footer {
+    height: 34px;
+    max-width: 130px;
+  }
+  .ecdi-logo-auth {
+    height: 48px;
+    max-width: 150px;
+  }
+}
+
+
